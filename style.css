@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(6, 12, 18);
+    position: relative;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+
+.loop{
+    width: max(500px, 30%);
+    height: 450px;
+    border: 2px solid hsl(0, 0%, 96%);
+    padding-top: 4.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: borderColor 300ms ease-in;
+    &:nth-child(1){
+        border-radius: 47% 63% 55% 70% / 55% 37% 34% 80%;
+    }
+    &:nth-child(2){
+        border-radius: 40% 45% 65% 85% / 49% 79% 71% 100%;
+    }
+    &:nth-child(3){
+        border-radius: 61% 65% 75% 59% / 49% 60% 71% 55%;
+    }
+}
+
+h1{
+    color: white;
+}
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sign input{
+    background-color: transparent;
+    caret-color: grey;
+    color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    border: 2px solid hsl(0, 0%, 70%);
+    border-radius: 20px;
+    padding: 1em;
+    &:nth-child(3){
+        border: none;
+        font-weight: 700;
+        color: black;
+        background: grey;
+        cursor: pointer;
+    }
+}
+input::placeholder{
+    font-size: 16px;
+    color: hsl(0, 0%, 70%);
+}
+/* input[type=button]:hover{
+    background-color: hsl(0, 0%, 80%);
+} */
+span{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+span button{
+    color: hsl(0, 0%, 90%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+span button:hover{
+    transition: all 100ms ease-in;
+    transform: scale(1.2);
+}
+
+.pop-up{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    background-color: rgba(6, 12, 18, 0.98);
+}
+.pop-up .x{
+    display: flex;
+    justify-content: end;
+    width: max(30%, 350px);
+}
+.x img:hover{
+    transform: scale(2);
+    transition: transform 100ms ease-in;
+}
+
+.register{
+    width: max(30%, 350px);
+    padding: 2em;
+}
+.register input{
+    background-color: transparent;
+    caret-color: grey;
+    color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    border: 2px solid hsl(0, 0%, 70%);
+    border-radius: 20px;
+    padding: 1em;
+    &:nth-child(5){
+        border: none;
+        font-weight: 700;
+        color: black;
+        background: grey;
+        cursor: pointer;
+    }
+}
+input[type=button]:hover{
+    background-color: hsl(0, 0%, 80%);
+}
